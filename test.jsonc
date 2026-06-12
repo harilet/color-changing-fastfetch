@@ -1,0 +1,171 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "type": "none"
+  },
+  "display": {
+    "brightColor": true,
+    "color": {
+      "keys": "#5294e2",
+      "title": "#5294e2"
+    },
+    "key": {
+      "width": 20, // Aligns keys to this width
+      "type": "string" // string, icon, both, or none
+    },
+    "constants": [
+       "\u001b[38;2;82;148;226m"
+    ]
+  },
+  "general": {
+    "thread": true,
+    "processingTimeout": 5000,
+    "detectVersion": true,
+    "playerName": "",
+    "dsForceDrm": false
+  },
+  "modules": [
+    "title",
+    {
+      "type": "custom",
+      "format": "{$1}┌──────────────────────────────────────────────────────────────────────────────────────────"
+    },
+    {
+      "type": "os",
+      "key": "│ OS"
+    },
+    {
+      "type": "host",
+      "key": "│ host"
+    },
+    {
+      "type": "kernel",
+      "key": "│ kernel"
+    },
+    {
+      "type": "de",
+      "key": "│ de"
+    },
+    {
+      "type": "terminal",
+      "key": "│ terminal"
+    },
+    {
+      "type": "custom",
+      "format": "{$1}├─────────────────────────────────────────────────────────────────────────────────────────┤"
+    },
+    {
+      "type": "uptime",
+      "key": "│ uptime"
+    },
+    {
+      "type": "shell",
+      "key": "│ shell"
+    },
+    {
+      "type": "display",
+      "compactType": "none",
+      "key": "│ display"
+    },
+    {
+      "type": "custom",
+      "format": "{$1}├─────────────────────────────────────────────────────────────────────────────────────────┤"
+    },
+    {
+      "type": "cpu",
+      "temp": false,
+      "showPeCoreCount": false,
+      "tempSensor": "",
+      "key": "│ cpu"
+    },
+    {
+      "type": "gpu",
+      "driverSpecific": false,
+      "detectionMethod": "pci",
+      "temp": false,
+      "hideType": "none",
+      "percent": {
+        "green": 50,
+        "yellow": 80,
+        "type": 0
+      },
+      "key": "│ gpu"
+    },
+    {
+      "type": "memory",
+      "percent": {
+        "green": 50,
+        "yellow": 80,
+        "type": 0
+      },
+      "key": "│ memory"
+    },
+    {
+      "type": "swap",
+      "percent": {
+        "green": 50,
+        "yellow": 80,
+        "type": 0
+      },
+      "separate": false,
+      "key": "│ swap"
+    },
+    {
+      "type": "disk",
+      "showRegular": true,
+      "showExternal": true,
+      "showHidden": false,
+      "showSubvolumes": false,
+      "showReadOnly": true,
+      "showUnknown": false,
+      "folders": "",
+      "hideFolders": "/efi:/boot:/boot/*",
+      "hideFS": "",
+      "useAvailable": false,
+      "percent": {
+        "green": 50,
+        "yellow": 80,
+        "type": 0
+      },
+      "key": "│ disk"
+    },
+    {
+      "type": "custom",
+      "format": "{$1}├─────────────────────────────────────────────────────────────────────────────────────────┤"
+    },
+    {
+      "type": "localip",
+      "showIpv4": true,
+      "showIpv6": false,
+      "showMac": false,
+      "showLoop": false,
+      "showPrefixLen": true,
+      "showMtu": false,
+      "showSpeed": false,
+      "showFlags": false,
+      "compact": false,
+      "defaultRouteOnly": true,
+      "showAllIps": false,
+      "namePrefix": "",
+      "key": "│ localip"
+    },
+    {
+      "type": "battery",
+      "temp": false,
+      "percent": {
+        "green": 50,
+        "yellow": 20,
+        "type": 0
+      },
+      "key": "│ battery"
+    },
+    {
+      "type": "poweradapter",
+      "key": "│ poweradapter"
+    },
+    {
+      "type": "custom",
+      "format": "{$1}└──────────────────────────────────────────────────────────────────────────────────────────"
+    }
+  ]
+}
